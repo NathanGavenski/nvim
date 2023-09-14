@@ -6,7 +6,7 @@ vim.opt.termguicolors = true
 
 require("nvim-tree").setup({
     filters = {
-        dotfiles = true
+        dotfiles = false
     },
     actions = {
         open_file = { quit_on_open = true }
