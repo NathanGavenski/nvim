@@ -1,7 +1,7 @@
 local config = {
     colorcolumn = "100",
-    disable_filetypes = { "help", "text", "markdown" },
-    custom_colorcolumn = { tex = "0", python = { "80", "100" }, netrw = "0" }
+    disabled_filetypes = { "help", "text", "markdown", "tex", "netrw" },
+    custom_colorcolumn = { python = { "80", "100" } }
 }
 
 require("smartcolumn").setup(config)
