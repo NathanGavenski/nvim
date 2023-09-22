@@ -1,6 +1,6 @@
 --Line numbers
 vim.opt.nu = true
-vim.opt.relativenumber = false
+vim.opt.relativenumber = true
 
 --Identation
 vim.opt.tabstop = 4
@@ -19,6 +19,6 @@ vim.opt.incsearch = true
 vim.opt.termguicolors = true
 
 --Navigation
-vim.opt.scrolloff = 8
+vim.opt.scrolloff = 999
 vim.opt.updatetime = 50
 

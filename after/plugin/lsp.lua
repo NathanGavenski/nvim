@@ -5,7 +5,6 @@ lsp.preset("recommended")
 -- Fix Undefined global 'vim'
 lsp.nvim_workspace()
 
-
 local cmp = require('cmp')
 local cmp_mappings = lsp.defaults.cmp_mappings({
   ['<Enter>'] = cmp.mapping.confirm({ select = true }),
@@ -45,4 +44,5 @@ lsp.setup()
 vim.diagnostic.config({
     virtual_text = true
 })
+
 
