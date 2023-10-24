@@ -40,5 +40,6 @@ end)
 --nvim-tree
 vim.keymap.set("n", "<leader>n", "<CMD>:NvimTreeToggle<CR>")
 
-vim.keymap.set("n", "<C-h>", "<HOME>")
-vim.keymap.set("n", "<C-e>", "<END>")
+vim.keymap.set("n", "<C-H>", "<HOME>")
+vim.keymap.set({"n", "v"}, "<C-e>", "$")
+
