@@ -3,14 +3,14 @@ local lsp = require("lsp-zero")
 lsp.preset("recommended")
 
 -- Fix Undefined global 'vim'
-lsp.nvim_workspace()
+lsp.nvim_lua_ls()
 
 local cmp = require('cmp')
 local cmp_mappings = lsp.defaults.cmp_mappings({
   ['<Enter>'] = cmp.mapping.confirm({ select = true }),
 })
 
-lsp.setup_nvim_cmp({
+cmp.setup({
   mapping = cmp_mappings
 })
 
@@ -45,4 +45,10 @@ vim.diagnostic.config({
     virtual_text = true
 })
 
-
+require('mason').setup({})
+require('mason-lspconfig').setup({
+  ensure_installed = {"autopep8", "pylint", "debugpy", "python-lsp-server", "textlab"},
+  handlers = {
+    lsp.default_setup,
+  },
+})
