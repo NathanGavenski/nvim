@@ -29,6 +29,7 @@ return require('packer').startup(function(use)
  use('tpope/vim-fugitive')
 
  use('lervag/vimtex')
+
  use("m4xshen/smartcolumn.nvim")
 
  use {
