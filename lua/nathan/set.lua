@@ -21,4 +21,3 @@ vim.opt.termguicolors = true
 --Navigation
 vim.opt.scrolloff = 999
 vim.opt.updatetime = 50
-
