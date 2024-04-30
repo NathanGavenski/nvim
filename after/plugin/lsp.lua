@@ -56,12 +56,17 @@ vim.diagnostic.config({
 })
 
 require('mason').setup({
-    ensure_installed = {"pylint", "debugpy", "autopep8"}
+    ensure_installed = {"pylint", "debugpy", "autopep8", "ltex"}
 })
 require('mason-lspconfig').setup({
   ensure_installed = {"pylsp", "texlab"},
   handlers = {
     lsp.default_setup,
-  },
+  }
+})
+require('lspconfig').ltex.setup({
+  settings = {
+    ltex = { language = "en-GB" }
+  }
 })
 
