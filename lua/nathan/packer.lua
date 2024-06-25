@@ -7,11 +7,11 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
-  use {"nvim-lua/plenary.nvim"}
+  use { "nvim-lua/plenary.nvim" }
 
   use {
-	  'nvim-telescope/telescope.nvim', tag = '0.1.x',
-	  requires = { {'nvim-lua/plenary.nvim'} }
+      'nvim-telescope/telescope.nvim', tag = '0.1.x',
+      requires = { {'nvim-lua/plenary.nvim'} }
   }
 
  use {
@@ -33,12 +33,12 @@ return require('packer').startup(function(use)
  use("m4xshen/smartcolumn.nvim")
 
  use {
-	 'VonHeikemen/lsp-zero.nvim',
-	 requires = {
-		--LSP Support
-		{'neovim/nvim-lspconfig'},
-		{'williamboman/mason.nvim'},
-		{'williamboman/mason-lspconfig.nvim'},
+     'VonHeikemen/lsp-zero.nvim',
+     requires = {
+	--LSP Support
+	{'neovim/nvim-lspconfig'},
+	{'williamboman/mason.nvim'},
+	{'williamboman/mason-lspconfig.nvim'},
 
         --Autocompletion
         {'hrsh7th/nvim-cmp'},

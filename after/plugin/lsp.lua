@@ -62,11 +62,24 @@ require('mason-lspconfig').setup({
   ensure_installed = {"pylsp", "texlab"},
   handlers = {
     lsp.default_setup,
+    
   }
 })
 require('lspconfig').ltex.setup({
   settings = {
     ltex = { language = "en-GB" }
+  }
+})
+require('lspconfig').pylsp.setup({
+  settings = {
+    pylsp = {
+      plugins = {
+        pycodestyle = {
+          ignore = {'E266'}
+          maxLineLength = 100
+        },
+      }
+    }
   }
 })
 
