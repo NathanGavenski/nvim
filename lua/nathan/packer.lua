@@ -105,5 +105,12 @@ return require('packer').startup(function(use)
 
 use("lukas-reineke/indent-blankline.nvim")
 
+use({
+    'hat0uma/csvview.nvim',
+    config = function()
+        require('csvview').setup()
+    end,
+})
+
 end)
 
