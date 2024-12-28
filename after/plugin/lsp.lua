@@ -13,6 +13,7 @@ lsp.set_preferences({
     }
 })
 
+vim.keymap.set("i", "<C-h>", "<Nop>")
 lsp.on_attach(function(client, bufnr)
     local opts = {buffer = bufnr, remap = false}
 
