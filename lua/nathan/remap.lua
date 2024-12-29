@@ -2,7 +2,23 @@ vim.g.mapleader = " "
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
-vim.keymap.set("v", "I", function() vim.cmd(":g/^/m0") end)
+vim.keymap.set("v", "<C-i>", function()
+    local start_row = vim.fn.line("v")
+    local end_row = vim.fn.line(".")
+
+    if start_row > end_row then
+        start_row, end_row = end_row, start_row
+    end
+
+    local lines = vim.fn.getline(start_row, end_row)
+    local reversed = {}
+    for i = #lines, 1, -1 do
+        table.insert(reversed, lines[i])
+    end
+    vim.fn.setline(start_row, reversed)
+
+    vim.cmd(string.format("normal! %dGV%dG", start_row, end_row))
+end, { desc = "Invert selected rows" })
 
 vim.keymap.set("n", "J", "mzJ`z")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
